@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './tasks.css'; // Import the CSS file
 
 function Tasks() {
   const [tasks, setTasks] = useState([]);
@@ -53,16 +54,17 @@ function Tasks() {
   };
 
   return (
-    <div>
+    <div className="tasks-container">
       <h1>Tasks</h1>
-      <button onClick={() => window.location.href='/add-task'}>Add Task</button>
+      <button className="add-task-button" onClick={() => window.location.href='/add-task'}>Add Task</button>
+      <button className="back-login-button" onClick={() => window.location.href='/login'}>Login Page</button>
       {tasks.map(task => (
-        <div key={task.id}>
-          <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>{task.title}</span>
-          <button onClick={() => handleToggleComplete(task.id)}>
+        <div key={task.id} className="task-item">
+          <span style={{ textTransform: task.completed ? 'uppercase' : 'none' }}>{task.title}</span>
+          <button className="complete-button" onClick={() => handleToggleComplete(task.id)}>
             {task.completed ? 'Mark Incomplete' : 'Mark Complete'}
           </button>
-          <button onClick={() => handleDelete(task.id)}>Delete</button>
+          <button className="delete-button" onClick={() => handleDelete(task.id)}>Delete</button>
         </div>
       ))}
     </div>

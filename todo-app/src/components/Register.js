@@ -1,7 +1,6 @@
-// src/components/Register.js
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './register.css'; // Import the CSS file
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -31,31 +30,37 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Username:
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <button type="submit">Register</button>
-      </form>
+    <div className="register-container">
+      <div className="register-box">
+        <h1>Register</h1>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Username:
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </label>
+          <button type="submit">Register</button>
+        </form>
+        <button
+          className="login-button"
+          onClick={() => navigate('/login')}
+        >
+          Login
+        </button>
+      </div>
     </div>
   );
 };

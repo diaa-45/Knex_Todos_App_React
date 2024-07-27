@@ -1,0 +1,89 @@
+/* src/components/Tasks.css */
+
+.tasks-container {
+    padding: 20px;
+    max-width: 800px; /* Adjusted for more width to accommodate the side button */
+    margin: auto;
+    position: relative;
+  }
+  
+  .tasks-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .tasks-container .add-task-button {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .tasks-container .add-task-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .tasks-container .back-login-button {
+    position: absolute;
+    left: -130px; /* Adjusted for side placement */
+    top: 20px;
+    background-color: #e43314;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .tasks-container .back-login-button:hover {
+    background-color: #e0a800;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .task-item span {
+    flex-grow: 1;
+    font-size: 16px;
+  }
+  
+  .task-item button {
+    margin-left: 10px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .task-item .complete-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .task-item .complete-button:hover {
+    background-color: #218838;
+  }
+  
+  .task-item .delete-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .task-item .delete-button:hover {
+    background-color: #c82333;
+  }
+  
